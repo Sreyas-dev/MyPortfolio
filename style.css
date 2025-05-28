@@ -1,0 +1,162 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Required for transform to work correctly */
+    padding: 5px 0; /* Add some padding to make hover area slightly larger and visually balanced */
+}
+
+nav a:hover {
+    color: #ddd; /* Lighter color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller desktops */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        display: block; /* Make links take full width for easier tapping */
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        position: static; /* Remove fixed positioning for smaller screens */
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 0.8rem 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        padding-left: 0; /* Remove default padding */
+    }
+    
+    section {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Ensure skill list items are stacked and readable */
+    #skills ul {
+        padding-left: 0; /* Remove default padding if items are block/inline-block */
+        list-style-position: inside; /* If using list-style with padding on items */
+    }
+
+    #skills ul li {
+        background-color: #e9e9e9; /* Light background for skill items */
+        padding: 8px 12px;
+        margin: 5px; /* Add margin for spacing between items */
+        border-radius: 5px;
+        display: inline-block; /* Allow box-shadow and transform */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #skills ul li:hover {
+        transform: translateY(-5px); /* Lift effect */
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    /* Adjust experience section for better readability */
+    #experience div {
+        margin-bottom: 15px;
+    }
+
+    #experience h3 {
+        font-size: 1.1rem;
+    }
+}
